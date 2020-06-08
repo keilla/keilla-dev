@@ -23,6 +23,10 @@ module.exports = {
           'sass-loader',
         ],
       },
+      {
+        test: /\.html$/,
+        loader: 'html-loader'
+      }
     ]
   },
   plugins: [HTMLWebpackPluginConfig]
