@@ -1,7 +1,7 @@
 import './styles/style.scss';
 
-import header from './app/header.html';
+import navBar from './app/nav-bar.html';
 
 window.onload = function() {
-  document.getElementById("root").innerHTML = header;
+  document.getElementById("root").innerHTML = navBar;
 }

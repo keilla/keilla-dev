@@ -1,0 +1,48 @@
+@import '../settings.scss';
+
+.nav-bar {
+  display: flex;
+  font-size: $font-size-medium;
+  font-weight: $font-weight-semi-bold;
+  padding: $giga-byte-space 0;
+  align-items: center;
+}
+
+.nav-bar-icon {
+  padding-right: $zetta-byte-space;
+
+  & > .circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: $purple;
+    display: inline-block;
+    margin-right: $bit-space;
+  }
+
+  & > .rectangle {
+    width: 20px;
+    height: 40px;
+    border-radius: 30px;
+    background-color: $pink;
+    display: inline-block;
+  }
+}
+
+.nav-bar-item {
+
+  padding: 0  $giga-byte-space $nibble-space;
+  border-bottom: solid 2px transparent;
+  
+  &:hover {
+    color: $purple;
+    border-bottom: solid 2px $purple;
+    cursor: pointer;
+  }
+
+  & > .link {
+    &:active {
+      color: $purple;
+    }
+  }
+}

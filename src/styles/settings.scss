@@ -20,14 +20,18 @@ $font-size-medium: 16px;
 $font-size-big: 24px;
 
 $font-weight-normal: 400;
-$font-weight-semi-bold: 600;
+$font-weight-semi-bold: 500;
 $font-weight-bold: 700;
 $font-weight-extra-bold: 800;
 
 /* space sizes */
-
-$space-mini: 4px;
-$space-small: 8px;
-$space-normal: 16px;
-$space-medium: 24px;
-$space-big: 36px;
+$bit-space: 6px;
+$nibble-space: 12px;
+$byte-space: 18px;
+$kilo-byte-space: 24px;
+$mega-byte-space: 30px;
+$giga-byte-space: 36px;
+$tera-byte-space: 42px;
+$peta-byte-space: 48px;
+$exa-byte-space: 56px;
+$zetta-byte-space: 60px;
