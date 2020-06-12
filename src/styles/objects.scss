@@ -3,6 +3,12 @@
 * Patterns that are repeated in the application
 */
 
+@import './settings.scss';
+
 .page-container {
-  margin: 0 20%;
+  margin: $kilo-byte-space 15%;
+}
+
+.section {
+  margin-top: $zetta-byte-space;
 }
