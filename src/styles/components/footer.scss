@@ -1,0 +1,52 @@
+@import '../settings.scss';
+
+.footer-section {
+  padding: $zetta-byte-space 0;
+  border-top: solid 2px lighten($purple, 28%);
+  display: flex;
+  
+  & > .illustration {
+    width: 30%;
+    margin-right: 15%;
+  }
+
+  & > .content {
+    width: 70%;
+    margin: 0 15%;
+  }
+}
+
+.footer-block {
+  & > .text {
+    color: $dark-grey;
+    font-weight: $font-weight-bold;
+  }
+
+  & > .logo {
+    margin-right: $nibble-space;
+  }
+
+  & > .goodbye {
+    display: block;
+  }
+
+  &+.footer-block {
+    padding-top: $giga-byte-space;
+  }
+}
+
+.footer-social-media {
+  display: flex;
+  margin-top: $nibble-space;
+  justify-content: space-between;
+
+  .icon {
+    width: 50px;
+    opacity: 0.3;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
