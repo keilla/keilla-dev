@@ -4,24 +4,18 @@
   display: flex;
   font-size: $font-size-normal;
   font-weight: $font-weight-semi-bold;
-  padding: $mega-byte-space 0;
   align-items: center;
 }
 
-.nav-bar-item {
-
-  padding: 0  $giga-byte-space $nibble-space;
-  border-bottom: solid 2px transparent;
-  
-  &:hover {
-    color: $purple;
-    border-bottom: solid 2px $purple;
-    cursor: pointer;
-  }
-
+.nav-bar-item {  
   & > .link {
-    &:active {
+    border-bottom: solid 2px transparent;
+    padding: 0  $giga-byte-space $nibble-space;
+    
+    &:hover {
       color: $purple;
+      border-bottom: solid 2px $purple;
+      cursor: pointer;
     }
   }
 }

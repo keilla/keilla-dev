@@ -21,6 +21,7 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font: normal normal $font-weight-normal $font-size-normal 'Helvetica', sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
