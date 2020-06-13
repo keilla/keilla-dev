@@ -17,7 +17,7 @@ $width-p: 769px;
 $font-size-mini: 10px;
 $font-size-small: 12px;
 $font-size-normal: 16px;
-$font-size-medium: 20px;
+$font-size-medium: 40px;
 $font-size-big: 80px;
 
 $font-weight-normal: 400;
@@ -26,13 +26,14 @@ $font-weight-bold: 700;
 $font-weight-extra-bold: 800;
 
 /* space sizes */
-$bit-space: 6px;
-$nibble-space: 12px;
-$byte-space: 18px;
-$kilo-byte-space: 24px;
-$mega-byte-space: 30px;
-$giga-byte-space: 36px;
-$tera-byte-space: 42px;
-$peta-byte-space: 48px;
-$exa-byte-space: 56px;
-$zetta-byte-space: 60px;
+$bit-space: 8px;
+$nibble-space: 16px;
+$byte-space: 24px;
+$kilo-byte-space: 32px;
+$mega-byte-space: 408px;
+$giga-byte-space: 48px;
+$tera-byte-space: 56px;
+$peta-byte-space: 64px;
+$exa-byte-space: 72px;
+$zetta-byte-space: 80px;
+$yotta-byte-space: 88px;

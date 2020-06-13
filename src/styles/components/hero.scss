@@ -1,19 +1,21 @@
 @import '../settings.scss';
 
 .hero-section {
-  position: relative;
+  display: flex;
 
-  & > .greeting {
-    font-weight: $font-weight-extra-bold;
-    font-style: $font-size-big;
-    color: $dark-grey;
+  & > .content {
+    width: 50%;
+  
+    & > .greeting {
+      font-weight: $font-weight-extra-bold;
+      font-style: $font-size-big;
+      color: $dark-grey;
+    }
   }
 
   & > .illustration {
-    width: 500px;
-    position: absolute;
-    right: 0;
-    top: 0;
+    width: 50%;
+    object-fit: contain;
   }
 }
 

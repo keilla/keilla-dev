@@ -1,0 +1,28 @@
+@import '../settings.scss';
+
+.bio-section {
+  display: flex;
+  background-color: lighten($pink, 28%);
+  border-radius: 30px;
+  padding: $zetta-byte-space $giga-byte-space;
+
+  & > .content {
+    width: 70%;
+
+    & > .title {
+      color: $dark-grey;
+      font-weight: bold;
+      margin-bottom: $giga-byte-space;
+    }
+
+    & > .text {
+      line-height: 160%;
+    }
+  }
+
+  & > .illustration {
+    width: 30%;
+    object-fit: contain;
+    margin-right: $peta-byte-space;
+  }
+}
