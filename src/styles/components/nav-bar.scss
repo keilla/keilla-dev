@@ -7,10 +7,16 @@
   align-items: center;
 }
 
-.nav-bar-item {  
+.nav-bar-item {
+
+  & > .logo {
+    margin-right: $nibble-space;
+  }
+
+
   & > .link {
     border-bottom: solid 2px transparent;
-    padding: 0  $giga-byte-space $nibble-space;
+    padding: $nibble-space  $giga-byte-space;
     
     &:hover {
       color: $purple;
