@@ -13,18 +13,20 @@ h5 {
   margin: 0;
   font-weight: $font-weight-semi-bold;
   line-height: 1.2;
+  color: $dark-grey;
 }
 
 h1 {
-  font-size: $font-size-big;
+  font-size: $font-size-extra-big;
 }
 
 h2 {
-  font-size: $font-size-medium;
+  font-size: $font-size-big;
+  font-weight: $font-weight-extra-bold;
 }
 
 h3 {
-  font-size: $font-size-normal;
+  font-size: $font-size-medium;
 }
 
 a {

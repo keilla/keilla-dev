@@ -4,15 +4,13 @@
   display: flex;
   background-color: lighten($pink, 28%);
   border-radius: 30px;
-  padding: $zetta-byte-space $giga-byte-space;
+  padding: $exa-byte-space $mega-byte-space;
 
   & > .content {
     width: 70%;
 
     & > .title {
-      color: $dark-grey;
-      font-weight: bold;
-      margin-bottom: $giga-byte-space;
+      margin-bottom: $mega-byte-space;
     }
 
     & > .text {
@@ -23,6 +21,6 @@
   & > .illustration {
     width: 30%;
     object-fit: contain;
-    margin-right: $peta-byte-space;
+    margin-right: $tera-byte-space;
   }
 }

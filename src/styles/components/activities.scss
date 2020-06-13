@@ -1,0 +1,67 @@
+@import '../settings.scss';
+
+.activities-section {
+  text-align: center;
+
+  & > .title {
+    margin-bottom: $mega-byte-space;
+  }
+
+  & > .text {
+    width: 50%;
+    margin: 0 auto $mega-byte-space;
+  }
+
+  & > .content {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.activity-box {
+  border-radius: 30px;
+  position: relative;
+  margin-left: 75px;
+  padding: $mega-byte-space 100px $kilo-byte-space;
+  text-align: left;
+
+  &.-primary {
+    background-color: lighten($purple, 28%);
+  }
+
+  &.-secondary {
+    background-color: lighten($green, 28%);
+  }
+
+  & > .title {
+    margin-bottom: $byte-space;
+  }
+
+  & > .text {
+    margin: $kilo-byte-space 0 $mega-byte-space;
+  }
+
+  & > .illustration {
+    width: 150px;
+    position: absolute;
+    object-fit: contain;
+    right: 80%;
+    top: $mega-byte-space;
+  }
+
+  & > .link {
+    color: $dark-grey;
+    font-weight: $font-weight-extra-bold;
+    border-radius: 30px;
+    padding: $nibble-space $byte-space;
+
+    &:hover {
+      background-color: rgba($color: $purple, $alpha: 0.1);
+    }
+
+    & > .icon {
+      vertical-align: bottom;
+      margin-left: $bit-space;
+    }
+  }
+}
