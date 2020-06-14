@@ -1,10 +1,12 @@
-@import '../settings.scss';
-
 .nav-bar {
   display: flex;
   font-size: $font-size-normal;
   font-weight: $font-weight-semi-bold;
   align-items: center;
+
+  @include bp(baby-bear) {
+    display: none;
+  }
 }
 
 .nav-bar-item {

@@ -3,14 +3,16 @@
 * Patterns that are repeated in the application
 */
 
-@import './settings.scss';
-
 .page-container {
   margin: $kilo-byte-space 15%;
 }
 
 .section {
   margin-top: $zetta-byte-space;
+
+  @include bp(baby-bear) {
+    margin-top: $mega-byte-space;
+  }
 }
 
 .arrow-up {
@@ -23,7 +25,6 @@
   border: none;
   padding: 15px;
   border-radius: 50%;
-  font-size: 18px;
   background-color: $white;
   transform: rotate(-90deg);
 

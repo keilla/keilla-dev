@@ -1,25 +1,30 @@
-@import '../settings.scss';
-
 .hero-section {
-  display: flex;
 
-  & > .content {
-    width: 50%;
-  
-    & > .greeting {
-      font-weight: $font-weight-extra-bold;
-      color: $dark-grey;
+  & > .greeting {
+    font-weight: $font-weight-extra-bold;
+
+    @include bp(baby-bear) {
+      font-size: 3em;
     }
   }
 
-  & > .illustration {
-    width: 50%;
-    object-fit: contain;
+  & > .content {
+    display: flex;
+    justify-content: space-between;
+
+    & > .illustration {
+      width: 50%;
+      object-fit: contain;
+    }
   }
 }
 
 .personal-keywords {
   margin-top: $exa-byte-space;
+
+  @include bp(baby-bear) {
+    margin-top: $kilo-byte-space;
+  }
 
   & > .word {
     &+.word {

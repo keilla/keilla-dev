@@ -1,26 +1,47 @@
-@import '../settings.scss';
-
 .bio-section {
-  display: flex;
   background-color: lighten($pink, 28%);
   border-radius: 30px;
   padding: $exa-byte-space $mega-byte-space;
 
-  & > .content {
-    width: 70%;
+  @include bp(baby-bear) {
+    padding: $kilo-byte-space $byte-space;
+  }
 
-    & > .title {
-      margin-bottom: $mega-byte-space;
+  & > .title {
+    margin-bottom: $mega-byte-space;
+    text-align: center;
+
+    @include bp(baby-bear) {
+      margin-bottom: $byte-space;
+    }
+  }
+
+  & > .content {
+    display: flex;
+    justify-content: space-between;
+
+    @include bp(baby-bear) {
+      flex-direction: column;
     }
 
     & > .text {
       line-height: 160%;
-    }
-  }
+      width: 60%;
 
-  & > .illustration {
-    width: 30%;
-    object-fit: contain;
-    margin-right: $tera-byte-space;
+      @include bp(baby-bear) {
+        width: 100%;
+      }
+
+    }
+
+    & > .illustration {
+      width: 30%;
+      object-fit: contain;
+
+      @include bp(baby-bear) {
+        width: 100%;
+        padding: 0 $byte-space;
+      }
+    }
   }
 }

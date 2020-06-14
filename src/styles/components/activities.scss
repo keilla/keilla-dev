@@ -1,19 +1,27 @@
-@import '../settings.scss';
-
 .activities-section {
   text-align: center;
 
   & > .title {
     margin-bottom: $mega-byte-space;
+
+    @include bp(baby-bear) {
+      margin-bottom: $bit-space;
+    }
   }
 
   & > .text {
     width: 50%;
     margin: 0 auto $mega-byte-space;
+    
+    @include bp(baby-bear) {
+      margin-bottom: $byte-space;
+      width: 80%;
+    }
   }
 
   & > .content {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
   }
 }
@@ -21,9 +29,20 @@
 .activity-box {
   border-radius: 30px;
   position: relative;
-  margin-left: 75px;
-  padding: $mega-byte-space 100px $kilo-byte-space;
+  padding: $mega-byte-space $yotta-byte-space $kilo-byte-space;
   text-align: left;
+  flex-basis: 40%;
+  margin-left: 75px;
+
+  @include bp(baby-bear) {
+    flex-basis: 100%;
+    padding: $byte-space $mega-byte-space $nibble-space;
+    margin-left: 40px;
+    
+    &+.activity-box {
+      margin-top: $kilo-byte-space;
+    }
+  }
 
   &.-primary {
     background-color: lighten($purple, 28%);
@@ -38,15 +57,24 @@
   }
 
   & > .text {
-    margin: $kilo-byte-space 0 $mega-byte-space;
+    margin: $kilo-byte-space 0;
+
+    @include bp(baby-bear) {
+      margin: $nibble-space 0 $byte-space;
+    }
   }
 
   & > .illustration {
     width: 150px;
     position: absolute;
     object-fit: contain;
-    right: 80%;
+    left: -75px;
     top: $mega-byte-space;
+
+    @include bp(baby-bear) {
+      width: 80px;
+      left: -40px;
+    }
   }
 
   & > .link {
@@ -54,6 +82,11 @@
     font-weight: $font-weight-extra-bold;
     border-radius: 30px;
     padding: $nibble-space $byte-space;
+    display: inline-block;
+
+    @include bp(baby-bear) {
+      padding: 0;
+    }
 
     &:hover {
       background-color: rgba($color: $purple, $alpha: 0.1);

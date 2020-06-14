@@ -1,14 +1,23 @@
-@import '../settings.scss';
-
 .footer-section {
   padding: $zetta-byte-space 0;
   border-top: solid 2px lighten($purple, 28%);
   display: flex;
+
+  @include bp(baby-bear) {
+    flex-direction: column;
+    padding: $mega-byte-space 0;
+  }
   
   & > .illustration {
     width: 30%;
     margin-right: 15%;
+
+    @include bp(baby-bear) {
+      margin: $mega-byte-space auto;
+      width: 50%;
+    }
   }
+
 
   & > .content {
     width: 70%;
@@ -17,21 +26,29 @@
 }
 
 .footer-block {
+  display: flex;
+  flex-wrap: wrap;
+
   & > .text {
     color: $dark-grey;
     font-weight: $font-weight-bold;
   }
 
-  & > .logo {
-    margin-right: $nibble-space;
+  .logo+.text {
+    margin-left: $nibble-space;
   }
 
   & > .goodbye {
     display: block;
+    text-align: center;
   }
 
   &+.footer-block {
     padding-top: $giga-byte-space;
+
+    @include bp(baby-bear) {
+      padding-top: $byte-space;
+    }
   }
 }
 
@@ -39,11 +56,16 @@
   display: flex;
   margin-top: $nibble-space;
   justify-content: space-between;
+  flex-basis: 100%;
 
   .icon {
     width: 50px;
     opacity: 0.3;
     cursor: pointer;
+
+    @include bp(baby-bear) {
+      width: 35px;
+    }
 
     &:hover {
       opacity: 1;

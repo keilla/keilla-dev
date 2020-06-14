@@ -3,8 +3,6 @@
 * Basic styling using tag selectors
 */
 
-@import 'settings.scss';
-
 h1,
 h2,
 h3,
@@ -16,17 +14,12 @@ h5 {
   color: $dark-grey;
 }
 
-h1 {
-  font-size: $font-size-extra-big;
-}
+h1 { font-size: 4em; }
+h2 { font-size: 2em; }
+h3 { font-size: 1.2em; }
 
-h2 {
-  font-size: $font-size-big;
-  font-weight: $font-weight-extra-bold;
-}
-
-h3 {
-  font-size: $font-size-medium;
+@media screen and (min-width: 1400px) {
+  html { font-size: 20px; }
 }
 
 a {

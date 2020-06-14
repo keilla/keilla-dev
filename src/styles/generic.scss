@@ -3,14 +3,13 @@
 * Generic Properties
 */
 
-@import 'settings.scss';
-
 body {
   margin: 0;
 }
 
 html {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 *,
 *::before,
@@ -20,13 +19,12 @@ html {
 html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font: normal normal $font-weight-normal $font-size-normal 'Helvetica', sans-serif;
+  font: normal normal $font-weight-normal 16px 'Helvetica', sans-serif;
   scroll-behavior: smooth;
 }
 
 body {
   color: $grey;
   background: $white;
-  font-size: $font-size-normal;
 }
 
