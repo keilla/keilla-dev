@@ -2,17 +2,29 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
-const HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
-  template: './index.html'
+const homePage = new HtmlWebpackPlugin({
+  template: './index.html',
+  chunks: ['main', 'home'],
+  title: 'keilla.dev'
+});
+const talksPage = new HtmlWebpackPlugin({
+  template: './index.html',
+  chunks: ['main', 'talks'],
+  filename: 'talks',
+  title: 'Talks'
 });
 const FaviconsWebpackPluginConfig = new FaviconsWebpackPlugin({
   logo: './src/assets/logo.svg',
 })
 
 module.exports = {
-  entry: './src/main.js',
+  entry: {
+    main: './src/main.js',
+    home: './src/app/home.js',
+    talks: './src/app/talks.js',
+  },
   output: {
-    filename: './public/assets/js/bundle.js'
+    filename: './public/assets/js/[name].js'
   },
   devServer: {
     hot: false,
@@ -43,7 +55,8 @@ module.exports = {
     ]
   },
   plugins: [
-    HTMLWebpackPluginConfig,
+    homePage,
+    talksPage,
     FaviconsWebpackPluginConfig
   ]
 };
