@@ -11,7 +11,7 @@
 
   & > .text {
     width: 50%;
-    margin: 0 auto $mega-byte-space;
+    margin: 0 auto;
     
     @include bp(baby-bear) {
       margin-bottom: $byte-space;
@@ -33,15 +33,13 @@
   text-align: left;
   flex-basis: 40%;
   margin-left: 75px;
+  margin-top: $kilo-byte-space;
+  flex-grow: 1;
 
   @include bp(baby-bear) {
     flex-basis: 100%;
     padding: $byte-space $mega-byte-space $nibble-space;
     margin-left: 40px;
-    
-    &+.activity-box {
-      margin-top: $kilo-byte-space;
-    }
   }
 
   &.-primary {
@@ -69,6 +67,7 @@
     position: absolute;
     object-fit: contain;
     left: -75px;
+    margin-left: $bit-space;
     top: $mega-byte-space;
 
     @include bp(baby-bear) {

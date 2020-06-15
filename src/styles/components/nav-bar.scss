@@ -3,6 +3,8 @@
   font-size: $font-size-normal;
   font-weight: $font-weight-semi-bold;
   align-items: center;
+  justify-content: space-between;
+  width: 50%;
 
   @include bp(baby-bear) {
     display: none;
@@ -10,15 +12,10 @@
 }
 
 .nav-bar-item {
-
-  & > .logo {
-    margin-right: $nibble-space;
-  }
-
-
   & > .link {
     border-bottom: solid 2px transparent;
-    padding: $nibble-space  $giga-byte-space;
+    padding: $nibble-space;
+    flex-grow: 1;
     
     &:hover {
       color: $purple;

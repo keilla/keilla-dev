@@ -31,4 +31,9 @@
   &:hover {
     background-color: lighten($purple, 28%);
   }
+
+  & > .icon {
+    display: block;
+    margin: 0 auto;
+  }
 }
