@@ -5,6 +5,10 @@
 
 .page-container {
   margin: $kilo-byte-space 15%;
+
+  @include bp(baby-bear) {
+    margin: $bit-space 5%;
+  }
 }
 
 .section {

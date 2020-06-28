@@ -4,11 +4,22 @@
   padding: $mega-byte-space;
   display: flex;
 
+  @include bp(baby-bear) {
+    flex-direction: column;
+  }
+
   & > .content {
     padding-left: $mega-byte-space;
 
+    @include bp(baby-bear) {
+      padding: 0;
+    }
+
     & > .title {
       font-weight: $font-weight-extra-bold;
+      @include bp(baby-bear) {
+        padding-top: $nibble-space;
+      }
     }
 
     & > .description {
@@ -19,6 +30,13 @@
       padding-top: $nibble-space;
       color: lighten($grey, 28%);
     }
+
+    & > .links {
+      @include bp(baby-bear) {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
   }
 }
 
@@ -27,22 +45,37 @@
   flex-direction: column;
   font-size: 0.8em;
 
-  .image {
+  @include bp(baby-bear) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  & > .image {
     background-color: $pink;
     height: 100px;
     width: 100px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+
+    @include bp(baby-bear) {
+      height: 80px;
+      width: 80px;
+    }
   }
+}
 
-  & > .icon-description {
-    padding-top: $nibble-space;
+.icon-description {
+  padding-top: $bit-space;
 
-    & > .icon {
-      width: 24px;
-      height: 24px;
-      vertical-align: bottom;
+  & > .icon {
+    width: 24px;
+    height: 24px;
+    vertical-align: bottom;
+
+    @include bp(baby-bear) {
+      height: 16px;
+      width: 16px;
     }
   }
 }
