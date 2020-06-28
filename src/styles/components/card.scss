@@ -1,0 +1,48 @@
+.card-activity {
+  border-radius: 20px;
+  background-color: $white;
+  padding: $mega-byte-space;
+  display: flex;
+
+  & > .image {
+    background-color: $pink;
+    flex-basis: 20%;
+    max-width: 200px;
+    max-height: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  & > .content {
+    padding: 0 $mega-byte-space;
+    flex-basis: 80%;
+
+    & > .title {
+      font-weight: $font-weight-extra-bold;
+    }
+
+    & > .location {
+      padding-top: $nibble-space;
+      color: lighten($grey, 28%);
+    }
+  }
+}
+
+.info-list {
+  display: flex;
+  justify-content: space-between;
+
+  .item {
+    border-radius: 30px;
+    padding: $nibble-space $byte-space;
+
+    &.-link {
+      cursor: pointer;
+
+      &:hover {
+        background-color: rgba($color: $purple, $alpha: 0.1);
+      }
+    }
+  }
+}

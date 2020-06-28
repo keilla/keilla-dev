@@ -1,16 +1,17 @@
-import { appendSection } from './utils';
+import { appendSection, addClickTopButton } from './utils';
 
 import navBar from '../app/nav-bar.html';
 import hero from '../app/hero.html';
 import bio from '../app/bio.html';
 import activities from '../app/activities.html';
-import footer from '../app/footer.html';
+import footer from './footer.html';
 
 window.onload = function () {
+  addClickTopButton();
   render();
 }
 
-export function render() {
+function render() {
   addNavBar();
   addSections();
 }

@@ -25,6 +25,6 @@ html {
 
 body {
   color: $grey;
-  background: $white;
+  background: lighten($grey, 60%);
 }
 

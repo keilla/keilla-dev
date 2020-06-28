@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 const homePage = new HtmlWebpackPlugin({
   template: './index.html',
@@ -13,9 +14,14 @@ const talksPage = new HtmlWebpackPlugin({
   filename: 'talks',
   title: 'Talks'
 });
-const FaviconsWebpackPluginConfig = new FaviconsWebpackPlugin({
+const faviconsWebpackPluginConfig = new FaviconsWebpackPlugin({
   logo: './src/assets/logo.svg',
-})
+});
+const copyPluginConfig = new CopyPlugin({
+  patterns: [
+    { from: './src/assets/logos/', to: 'public' },
+  ]
+});
 
 module.exports = {
   entry: {
@@ -46,17 +52,18 @@ module.exports = {
         test: /\.html$/,
         loader: 'html-loader'
       },
-       {
-         test: /\.(png|svg|jpg|gif)$/,
-         use: [
-           'file-loader',
-         ],
-       },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: [
+          'file-loader',
+        ],
+      },
     ]
   },
   plugins: [
     homePage,
     talksPage,
-    FaviconsWebpackPluginConfig
+    faviconsWebpackPluginConfig,
+    copyPluginConfig
   ]
 };

@@ -4,3 +4,13 @@ export function appendSection(component, postion='beforeend') {
   node.innerHTML = component;
   document.getElementById("root").insertAdjacentElement(postion, node);
 }
+
+export function addClickTopButton() {
+  const topButton = document.getElementById("top-button");
+  topButton.onclick = topFunction;
+}
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
