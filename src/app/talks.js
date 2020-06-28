@@ -1,4 +1,4 @@
-import { appendSection, addClickTopButton } from './utils';
+import { appendSection, appendElem, addClickTopButton } from './utils';
 import { CardComponent } from './card';
 
 import cardsTalks from './cards-talks.html';
@@ -15,6 +15,6 @@ export function render() {
 }
 
 function addSections() {
-  appendSection(cardsTalks);
+  appendElem(cardsTalks);
   appendSection(footer, 'afterEnd');
 }

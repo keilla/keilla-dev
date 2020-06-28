@@ -11,6 +11,12 @@
   }
 }
 
+.internal-page {
+  & > .button-link {
+    margin: $byte-space 0;
+  }
+}
+
 .section {
   margin-top: $zetta-byte-space;
 
@@ -55,10 +61,18 @@
 
   &:hover {
     background-color: rgba($color: $purple, $alpha: 0.1);
+    @include bp(baby-bear) {
+      background-color: unset;
+    }
   }
 
   & > .icon {
     vertical-align: bottom;
     margin-left: $bit-space;
+
+    &.-back {
+      transform: rotate(180deg);
+      vertical-align: unset;
+    }
   }
 }
