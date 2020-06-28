@@ -14,11 +14,13 @@ export class CardComponent extends HTMLElement {
     this.link = this.getAttribute('link');
     this.slides = this.getAttribute('slides');
     this.image = this.getAttribute('image');
+    this.language = this.getAttribute('language');
 
     this.querySelector('.title').textContent = this.title;
     this.querySelector('.location').textContent = this.location;
     this.querySelector('.description').textContent = this.description;
     this.querySelector('.date').textContent = this.date;
+    this.querySelector('.language').textContent = this.language;
     this.querySelector('.subscribe').setAttribute('href', this.link);
 
     const backgroundImage = `background-image: url(${this.image})`;

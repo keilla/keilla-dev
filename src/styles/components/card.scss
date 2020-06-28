@@ -4,22 +4,15 @@
   padding: $mega-byte-space;
   display: flex;
 
-  & > .image {
-    background-color: $pink;
-    flex-basis: 20%;
-    max-width: 200px;
-    max-height: 200px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
   & > .content {
-    padding: 0 $mega-byte-space;
-    flex-basis: 80%;
+    padding-left: $mega-byte-space;
 
     & > .title {
       font-weight: $font-weight-extra-bold;
+    }
+
+    & > .description {
+      margin: $byte-space 0;
     }
 
     & > .location {
@@ -31,18 +24,25 @@
 
 .info-list {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  font-size: 0.8em;
 
-  .item {
-    border-radius: 30px;
-    padding: $nibble-space $byte-space;
+  .image {
+    background-color: $pink;
+    height: 100px;
+    width: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 
-    &.-link {
-      cursor: pointer;
+  & > .icon-description {
+    padding-top: $nibble-space;
 
-      &:hover {
-        background-color: rgba($color: $purple, $alpha: 0.1);
-      }
+    & > .icon {
+      width: 24px;
+      height: 24px;
+      vertical-align: bottom;
     }
   }
 }

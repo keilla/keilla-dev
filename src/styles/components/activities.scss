@@ -75,25 +75,4 @@
       left: -40px;
     }
   }
-
-  & > .link {
-    color: $dark-grey;
-    font-weight: $font-weight-extra-bold;
-    border-radius: 30px;
-    padding: $nibble-space $byte-space;
-    display: inline-block;
-
-    @include bp(baby-bear) {
-      padding: 0;
-    }
-
-    &:hover {
-      background-color: rgba($color: $purple, $alpha: 0.1);
-    }
-
-    & > .icon {
-      vertical-align: bottom;
-      margin-left: $bit-space;
-    }
-  }
 }
